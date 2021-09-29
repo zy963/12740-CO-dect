@@ -1,4 +1,4 @@
-## Vechicular CO_2 Dection
+## Vechicular CO_{2} Dection
 
 Does it work?
 
