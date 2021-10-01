@@ -1,4 +1,4 @@
-## Vechicular {CO_2}  Dection
+## Vechicular $$CO_2$$  Dection
 
 Does it work?
 
