@@ -1,14 +1,45 @@
 ## Vechicular CO<sub>2</sub> Dection
 
-Does it work?
+vedio link:
 
-%y = x^2%
+---
 
-<p>CO<sub>2</sub></p>
+### Introduction
 
-You can use the [editor on GitHub](https://github.com/zy963/12740-CO-dect/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+- A brief summary
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+#### Motivation
+
+- Motivate the problem you plan to address
+
+- Why is the problem you are addressing important or interesting?
+
+#### Goals
+
+- What are you going to achieve by the end of the project specifically?
+  
+---
+
+### For Progress Report
+
+#### Current Progress
+
+- Summarize what you have done so far
+- Highlights: In particular, articulate thing(s) you have learned / solved outside of what was taught in class
+
+#### Problems Encountered
+
+- Articulate the problems you have encountered
+- 
+- This section is of the most importance in the progress report. It not only give the TA information on what help you may need, and also encourages you to think deeper about your problems.
+ 
+#### Future Plan
+- Describe what you plan to do in the next two weeks
+
+
+
+
+---
 
 ### Markdown
 
