@@ -1,7 +1,7 @@
 <script>
   var head = document.getElementsByTagName("header").item(0);
-  header.innerText = "Vechicular CO<sub>2</sub> Dection";
-  console("123")
+  var p = head.getElementsByTagName("h1").item(0);
+  h1.innerText = "12740-Vechicular CO<sub>2</sub> Dection";
 </script>
 
 <script>
