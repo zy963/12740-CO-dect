@@ -36,7 +36,6 @@ vedio link:
 #### Problems Encountered
 
 - Articulate the problems you have encountered
-- 
 - This section is of the most importance in the progress report. It not only give the TA information on what help you may need, and also encourages you to think deeper about your problems.
  
 #### Future Plan
@@ -48,8 +47,12 @@ vedio link:
 ### Methodology
 
 #### Phenomena of Interest
+temperature; gas density; PIR
 
-- Describe the physical phenomena of interest, e.g. physical principles, static and dynamic behavior, and signal characteristics
+- Temperature of the exhaust pipe
+Temperature is the measurement of hotness or coldness. 
+<u> how to caliberate 
+Describe the physical phenomena of interest, e.g. physical principles, static and dynamic behavior, and signal characteristics
 
 #### Sensors Used
 
