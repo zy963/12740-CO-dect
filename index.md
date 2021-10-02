@@ -50,8 +50,14 @@ vedio link:
 temperature; gas density; PIR
 
 - Temperature of the exhaust pipe
-Temperature is the measurement of hotness or coldness. 
-<u> how to caliberate 
+Temperature is the measurement of hotness or coldness. In this project we are using the Celsius (°C) temperature scale. The temperature measurement is intended to check the status of the vehicle engine. However, the sensor can only detect up 125°C, which is why we are mearsuring the exhaust pipe instead.
+<u> how to caliberate </u>
+
+- Density of CO<sub>2</sub>
+
+- Human occupancy
+For human occupancy we are using a PIR senor. PIR sensors are more complicated than the other two sensors used in this project. There are multiple variables that affect the sensors input and output. The PIR sensor itself has two slots in it, each slot is made of a special material that is sensitive to IR. The lens used here is not really doing much and so we see that the two slots can 'see' out past some distance (basically the sensitivity of the sensor). When the sensor is idle, both slots detect the same amount of IR, the ambient amount radiated from the room or walls or outdoors. When a warm body like a human or animal passes by, it first intercepts one half of the PIR sensor, which causes a positive differential change between the two halves. When the warm body leaves the sensing area, the reverse happens, whereby the sensor generates a negative differential change. These change pulses are what is detected.
+
 Describe the physical phenomena of interest, e.g. physical principles, static and dynamic behavior, and signal characteristics
 
 #### Sensors Used
