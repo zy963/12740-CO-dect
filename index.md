@@ -1,5 +1,9 @@
 <script>
   var head = document.getElementsByTagName("header").item(0);
+  header.innerText = "Vechicular CO<sub>2</sub> Dection";
+</script>
+<script>
+  var head = document.getElementsByTagName("header").item(0);
   var p = head.getElementsByTagName("p").item(0);
   p.innerText = "Yijie Zhu, Yuming Zhang, Zheyi Li";
 </script>
