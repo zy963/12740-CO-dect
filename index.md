@@ -1,8 +1,7 @@
 <script>
-  console.log("123");
   var head = document.getElementsByTagName("header").item(0);
   var p = head.getElementsByTagName("p").item(0);
-  p.innerText = "Luyuan Wang";
+  p.innerText = "Yijie Zhu, Yuming Zhang, Zheyi Li";
 </script>
 
 
