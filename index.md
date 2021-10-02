@@ -1,6 +1,6 @@
 <script>
   var head = document.getElementsByTagName("header").item(0);
-  var p = head.getElementsByTagName("h1").item(0);
+  var h1 = head.getElementsByTagName("h1").item(0);
   h1.innerText = "12740-Vechicular CO<sub>2</sub> Dection";
 </script>
 
