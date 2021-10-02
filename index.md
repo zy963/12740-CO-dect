@@ -1,7 +1,6 @@
 ## Vechicular CO<sub>2</sub> Dection
 
 vedio link:
-
 ---
 
 ### Introduction
@@ -34,8 +33,36 @@ vedio link:
 - This section is of the most importance in the progress report. It not only give the TA information on what help you may need, and also encourages you to think deeper about your problems.
  
 #### Future Plan
+
 - Describe what you plan to do in the next two weeks
 
+---
+
+### Methodology
+
+#### Phenomena of Interest
+
+- Describe the physical phenomena of interest, e.g. physical principles, static and dynamic behavior, and signal characteristics
+
+#### Sensors Used
+
+- Describe the sensors you used, e.g. physical principles, static and dynamic behavior, and signal characteristics
+
+#### Signal Conditioning and Processing
+
+- Describe the signal conditioning and processing procedures
+
+---
+
+### Experiments and Results
+
+- Describe the experiments you did and present the results; Use tables and plots if possible
+
+---
+
+### Discussion
+
+- Discuss the insights from the project
 
 
 
