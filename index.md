@@ -5,7 +5,7 @@
 </script>
 
 
-<h2 style="text-align:center;"> Vechicular CO<sub>2</sub> Dection </h2>
+<h2 style="text-align:center;"> Vechicular CO Dection </h2>
 vedio link:
 
 ---
@@ -56,7 +56,8 @@ Temperature is the measurement of hotness or coldness. In this project we are us
 - Density of CO<sub>2</sub>
 
 - Human occupancy<br />
-For human occupancy we are using a PIR senor. PIR sensors are more complicated than the other two sensors used in this project. There are multiple variables that affect the sensors input and output. The PIR sensor itself has two slots in it, each slot is made of a special material that is sensitive to IR. The lens used here is not really doing much and so we see that the two slots can 'see' out past some distance (basically the sensitivity of the sensor). When the sensor is idle, both slots detect the same amount of IR, the ambient amount radiated from the room or walls or outdoors. When a warm body like a human or animal passes by, it first intercepts one half of the PIR sensor, which causes a positive differential change between the two halves. When the warm body leaves the sensing area, the reverse happens, whereby the sensor generates a negative differential change. These change pulses are what is detected.
+For human occupancy we are using a PIR senor.<br /> 
+PIR sensors are more complicated than the other two sensors used in this project. There are multiple variables that affect the sensors input and output. The PIR sensor itself has two slots in it, each slot is made of a special material that is sensitive to IR. The lens used here is not really doing much and so we see that the two slots can 'see' out past some distance (basically the sensitivity of the sensor). When the sensor is idle, both slots detect the same amount of IR, the ambient amount radiated from the room or walls or outdoors. When a warm body like a human or animal passes by, it first intercepts one half of the PIR sensor, which causes a positive differential change between the two halves. When the warm body leaves the sensing area, the reverse happens, whereby the sensor generates a negative differential change. These change pulses are what is detected.
 
 Describe the physical phenomena of interest, e.g. physical principles, static and dynamic behavior, and signal characteristics
 
