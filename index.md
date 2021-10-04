@@ -75,7 +75,8 @@ Borrwed one more sensor to check if it is hardware problem or coding problem.
 1. Demo (5 minutes)
   
 ---
-The rest is a draft.  
+The rest is a draft. 
+
 ---
 
 ### Methodology
