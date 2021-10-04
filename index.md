@@ -63,7 +63,7 @@ However, out of safety concerns, we will measure humidity instead of CO. Note th
 - PIR Motion sensor malfunctioning  
 1. Always returns "True" values, even there is no motion in detection area.  
 
-Borrwed one more sensor to check if it is hardware problem or coding problem.  
+  Borrwed one more sensor to check if it is hardware problem or coding problem.  
   
 #### Future Plan
 
