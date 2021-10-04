@@ -20,7 +20,7 @@ This project focuses on the CO detection and initial response system for vehicle
 
 When CO density exceeds a certain threshold, our body replaces the oxygen in your red blood cells with carbon monoxide, which can lead to serious tissue damage, or even death[2]. The CO  produced by internal combustion gasoline engines is up to 30,000 parts per million (ppm). So it’s dangerous for a vehicle with a defective exhaust system where CO leaks from and enters the vehicle through holes in the body or open windows[3]. Therefore, we decided to develop a CO detection and initial response system to initially reduce or lift danger and fight for rescue time. 
 
-#### Goals
+#### Goals 123
 
 We installed a CO sensor and a motion sensor in the car cabinet and a temperature sensor in the exhaust pipe.  
   
