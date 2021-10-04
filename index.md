@@ -22,8 +22,8 @@ When CO density exceeds a certain threshold, our body replaces the oxygen in you
 
 #### Goals
 <p>
-We installed a CO sensor and a motion sensor in the car cabinet and a temperature sensor in the exhaust pipe.</br>
-</br>
+We installed a CO sensor and a motion sensor in the car cabinet and a temperature sensor in the exhaust pipe.  
+  
 If the CO density is high enough to be determined dangerous, the initial response system will be triggered. If the motion sensor detects the driver in the car, the initial response system will turn on the in-vehicle alarm and the air conditioning system. If there’s only passengers or no people in the car, the initial response system will send an emergency message to the driver besides the in-vehicle alarm and the air conditioning system. But considering that CO poisoning is a low possibility event, we add an extra temperature sensor for engine status check to verify that the high CO density is caused by the engine instead of a system failure. That is to say, the situation will be defined as dangerous when the CO concentration is high with the engine running. The corresponding action of the initial response system will be determined based on human occupancy. The flow chart is attached below.</br>
 </br>
 <img src="flow chart.png" alt="Flow Chart"></br>
