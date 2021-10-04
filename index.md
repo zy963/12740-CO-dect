@@ -20,7 +20,7 @@ This project focuses on the CO detection and initial response system for vehicle
 
 When CO density exceeds a certain threshold, our body replaces the oxygen in your red blood cells with carbon monoxide, which can lead to serious tissue damage, or even death[2]. The CO  produced by internal combustion gasoline engines is up to 30,000 parts per million (ppm). So it’s dangerous for a vehicle with a defective exhaust system where CO leaks from and enters the vehicle through holes in the body or open windows[3]. Therefore, we decided to develop a CO detection and initial response system to initially reduce or lift danger and fight for rescue time. 
 
-#### Goals 123
+#### Goals
 
 We installed a CO sensor and a motion sensor in the car cabinet and a temperature sensor in the exhaust pipe.  
   
@@ -42,18 +42,19 @@ However, out of safety concerns, we will measure humidity instead of CO. Note th
 <img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/circuit_1004.jpg" alt="Circuit">
 <div align="center">Circuit by Oct.04</div> 
   
-
-Temperature and humidity sensor
-Temperature focusing on determining the engine on/off status
-Humidity focusing on determining the CO concentration level
-CO concentration is dangerous so that we will assume the humidity has positive linear relationship with CO concentration
-2 Lights
-1 will keep lighting if the circuit is working properly
-Lighting will temperature and humidity sensor is working
-1 will keep lighting once the humidity(CO concentration) above certain threshold
-Data will be stored in a npy file, which can be imported on other device by using Python 3
-In our circuit, we will use light to reflect the CO concentration timely
-Motion sensor is malfunctioning
+  
+- Temperature and humidity sensor  
+Temperature focusing on determining the engine on/off status  
+Humidity focusing on determining the CO concentration level: CO concentration is dangerous so that we will assume the humidity has positive linear relationship with CO concentration  
+  
+- 2 Lights  
+1 will keep lighting if the circuit is working properly: Lighting while temperature and humidity sensor is working.  
+2 will keep lighting once the humidity(CO concentration) above certain threshold  
+  
+- Data will be stored in a .npy file, which can be imported on other device by using Python 3
+In our circuit, we will use light to reflect the CO concentration timely  
+  
+- <u>**Motion sensor is malfunctioning**</u>
 Only receive True input, still working on debugging
 Borrow the other motion sensor from other group to check whether or not the code has potential problem
 
