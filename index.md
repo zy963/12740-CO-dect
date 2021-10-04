@@ -26,8 +26,8 @@ We installed a CO sensor and a motion sensor in the car cabinet and a temperatur
   
 If the CO density is high enough to be determined dangerous, the initial response system will be triggered. If the motion sensor detects the driver in the car, the initial response system will turn on the in-vehicle alarm and the air conditioning system. If there’s only passengers or no people in the car, the initial response system will send an emergency message to the driver besides the in-vehicle alarm and the air conditioning system. But considering that CO poisoning is a low possibility event, we add an extra temperature sensor for engine status check to verify that the high CO density is caused by the engine instead of a system failure. That is to say, the situation will be defined as dangerous when the CO concentration is high with the engine running. The corresponding action of the initial response system will be determined based on human occupancy. The flow chart is attached below.  
   
-![Flow Chart](https://raw.githubusercontent.com/zy963/12740-CO-dect/blob/main/flow%20chart.png/to/im)
-<img src="https://github.com/zy963/12740-CO-dect/blob/main/flow%20chart.png" alt="Flow Chart">
+![Flow Chart](https://raw.githubusercontent.com/zy963/12740-CO-dect/main/flow%20chart.png/to/im)
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/flow%20chart.png" alt="Flow Chart">
   
 However, out of safety concerns, we will measure humidity instead of CO. Note that for the rest of the report, the target gas will still be addressed as CO even though it is humidity that is actually being measured.  
   
@@ -37,8 +37,22 @@ However, out of safety concerns, we will measure humidity instead of CO. Note th
 
 #### Current Progress
 
-- Summarize what you have done so far
-- Highlights: In particular, articulate thing(s) you have learned / solved outside of what was taught in class
+- Things that have been done by 10/2/2021
+Circuit Setup (80% complete)
+Temperature and humidity sensor
+Temperature focusing on determining the engine on/off status
+Humidity focusing on determining the CO concentration level
+CO concentration is dangerous so that we will assume the humidity has positive linear relationship with CO concentration
+2 Lights
+1 will keep lighting if the circuit is working properly
+Lighting will temperature and humidity sensor is working
+1 will keep lighting once the humidity(CO concentration) above certain threshold
+Data will be stored in a npy file, which can be imported on other device by using Python 3
+In our circuit, we will use light to reflect the CO concentration timely
+Motion sensor is malfunctioning
+Only receive True input, still working on debugging
+Borrow the other motion sensor from other group to check whether or not the code has potential problem
+
 
 #### Problems Encountered
 
