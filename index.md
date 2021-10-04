@@ -20,18 +20,16 @@ This project focuses on the CO detection and initial response system for vehicle
 
 When CO density exceeds a certain threshold, our body replaces the oxygen in your red blood cells with carbon monoxide, which can lead to serious tissue damage, or even death[2]. The CO  produced by internal combustion gasoline engines is up to 30,000 parts per million (ppm). So it’s dangerous for a vehicle with a defective exhaust system where CO leaks from and enters the vehicle through holes in the body or open windows[3]. Therefore, we decided to develop a CO detection and initial response system to initially reduce or lift danger and fight for rescue time. 
 
-#### Goals 123
+#### Goals
 
 We installed a CO sensor and a motion sensor in the car cabinet and a temperature sensor in the exhaust pipe.  
   
 If the CO density is high enough to be determined dangerous, the initial response system will be triggered. If the motion sensor detects the driver in the car, the initial response system will turn on the in-vehicle alarm and the air conditioning system. If there’s only passengers or no people in the car, the initial response system will send an emergency message to the driver besides the in-vehicle alarm and the air conditioning system. But considering that CO poisoning is a low possibility event, we add an extra temperature sensor for engine status check to verify that the high CO density is caused by the engine instead of a system failure. That is to say, the situation will be defined as dangerous when the CO concentration is high with the engine running. The corresponding action of the initial response system will be determined based on human occupancy. The flow chart is attached below.  
   
-<img src="https://github.com/zy963/12740-CO-dect/blob/main/flow%20chart.png" alt="Flow Chart">  
+<!-- <img src="https://github.com/zy963/12740-CO-dect/blob/main/flow%20chart.png" alt="Flow Chart">   --> -->
+![Flow Chart](https://github.com/zy963/12740-CO-dect/blob/main/flow%20chart.png)
   
 However, out of safety concerns, we will measure humidity instead of CO. Note that for the rest of the report, the target gas will still be addressed as CO even though it is humidity that is actually being measured.  
-
-
-
   
 ---
 
