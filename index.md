@@ -44,24 +44,24 @@ However, out of safety concerns, we will measure humidity instead of CO. Note th
   
   
 - Temperature and humidity sensor  
-Temperature focusing on determining the engine on/off status.  
-Humidity focusing on determining the CO concentration level: Out of safety concerns, we will measure humidity instead of CO.
+1. Temperature focusing on determining the engine on/off status.  
+1. Humidity focusing on determining the CO concentration level: Out of safety concerns, we will measure humidity instead of CO.
   
 - 2 Lights  
-1 will keep lighting if the circuit is working properly: Lighting while temperature and humidity sensor is working.  
-2 will keep lighting once the humidity(CO concentration) above certain threshold.  
+1. 1 will keep lighting if the circuit is working properly: Lighting while temperature and humidity sensor is working.  
+1. 2 will keep lighting once the humidity(CO concentration) above certain threshold.  
   
 - Data will be stored in a .npy file, which can be imported on other device by using Python 3.
-In our circuit, we will use light to reflect the CO concentration timely.  
+1. In our circuit, we will use light to reflect the CO concentration timely.  
   
 - Report Section  
-Introduction, Motivation and Goal first draft has been finished.  
-Waiting for experiments and results to make adjustment on these sections.   
+1. Introduction, Motivation and Goal first draft has been finished.  
+1. Waiting for experiments and results to make adjustment on these sections.   
   
 #### Problems Encountered
 
 - PIR Motion sensor malfunctioning  
-Always returns "True" values, even there is no motion in detection area.  
+1. Always returns "True" values, even there is no motion in detection area.  
 Borrwed one more sensor to check if it is hardware problem or coding problem.  
   
 #### Future Plan
@@ -119,6 +119,6 @@ Describe the physical phenomena of interest, e.g. physical principles, static an
 ---
 
 ### Reference
-[1]Centers for Disease Control and Prevention. PICTURE OF AMERICA REPORT. Available from URL:https://www.cdc.gov/pictureofamerica/pdfs/picture_of_america_poisoning.pdf
-[2]MAYO Clinic. (2019, October 16). Carbon monoxide poisoning. Mayo Clinic. Retrieved October 4, 2021, from https://www.mayoclinic.org/diseases-conditions/carbon-monoxide/symptoms-causes/syc-20370642. 
-[3]Iowa State University. (2020). Carbon monoxide poisoning: Vehicles (AEN-208). Department of Agricultural and Biosystems Engineering. Retrieved October 4, 2021, from https://www.abe.iastate.edu/extension-and-outreach/carbon-monoxide-poisoning-vehicles-aen-208/. 
+[1]Centers for Disease Control and Prevention. PICTURE OF AMERICA REPORT. Available from URL:https://www.cdc.gov/pictureofamerica/pdfs/picture_of_america_poisoning.pdf.  
+[2]MAYO Clinic. (2019, October 16). Carbon monoxide poisoning. Mayo Clinic. Retrieved October 4, 2021, from https://www.mayoclinic.org/diseases-conditions/carbon-monoxide/symptoms-causes/syc-20370642.   
+[3]Iowa State University. (2020). Carbon monoxide poisoning: Vehicles (AEN-208). Department of Agricultural and Biosystems Engineering. Retrieved October 4, 2021, from https://www.abe.iastate.edu/extension-and-outreach/carbon-monoxide-poisoning-vehicles-aen-208/.   
