@@ -26,7 +26,6 @@ We installed a CO sensor and a motion sensor in the car cabinet and a temperatur
   
 If the CO density is high enough to be determined dangerous, the initial response system will be triggered. If the motion sensor detects the driver in the car, the initial response system will turn on the in-vehicle alarm and the air conditioning system. If there’s only passengers or no people in the car, the initial response system will send an emergency message to the driver besides the in-vehicle alarm and the air conditioning system. But considering that CO poisoning is a low possibility event, we add an extra temperature sensor for engine status check to verify that the high CO density is caused by the engine instead of a system failure. That is to say, the situation will be defined as dangerous when the CO concentration is high with the engine running. The corresponding action of the initial response system will be determined based on human occupancy. The flow chart is attached below.  
   
-![Flow Chart](https://raw.githubusercontent.com/zy963/12740-CO-dect/main/flow%20chart.png/to/im)
 <img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/flow%20chart.png" alt="Flow Chart">
   
 However, out of safety concerns, we will measure humidity instead of CO. Note that for the rest of the report, the target gas will still be addressed as CO even though it is humidity that is actually being measured.  
@@ -37,8 +36,13 @@ However, out of safety concerns, we will measure humidity instead of CO. Note th
 
 #### Current Progress
 
-- Things that have been done by 10/2/2021
-Circuit Setup (80% complete)
+##### Things that have been done by 10/2/2021
+- Circuit Setup (80% complete)  
+  
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/circuit_1004.jpg" alt="Circuit">
+<div align="center">Circuit by Oct.04</div> 
+  
+
 Temperature and humidity sensor
 Temperature focusing on determining the engine on/off status
 Humidity focusing on determining the CO concentration level
