@@ -44,30 +44,36 @@ However, out of safety concerns, we will measure humidity instead of CO. Note th
   
   
 - Temperature and humidity sensor  
-Temperature focusing on determining the engine on/off status  
-Humidity focusing on determining the CO concentration level: CO concentration is dangerous so that we will assume the humidity has positive linear relationship with CO concentration  
+Temperature focusing on determining the engine on/off status.  
+Humidity focusing on determining the CO concentration level: Out of safety concerns, we will measure humidity instead of CO.
   
 - 2 Lights  
 1 will keep lighting if the circuit is working properly: Lighting while temperature and humidity sensor is working.  
-2 will keep lighting once the humidity(CO concentration) above certain threshold  
+2 will keep lighting once the humidity(CO concentration) above certain threshold.  
   
-- Data will be stored in a .npy file, which can be imported on other device by using Python 3
-In our circuit, we will use light to reflect the CO concentration timely  
+- Data will be stored in a .npy file, which can be imported on other device by using Python 3.
+In our circuit, we will use light to reflect the CO concentration timely.  
   
-- <u>**Motion sensor is malfunctioning**</u>
-Only receive True input, still working on debugging
-Borrow the other motion sensor from other group to check whether or not the code has potential problem
-
-
+- Report Section  
+Introduction, Motivation and Goal first draft has been finished.  
+Waiting for experiments and results to make adjustment on these sections.   
+  
 #### Problems Encountered
 
-- Articulate the problems you have encountered
-- This section is of the most importance in the progress report. It not only give the TA information on what help you may need, and also encourages you to think deeper about your problems.
- 
+- PIR Motion sensor malfunctioning  
+Always returns "True" values, even there is no motion in detection area.  
+Borrwed one more sensor to check if it is hardware problem or coding problem.  
+  
 #### Future Plan
 
-- Describe what you plan to do in the next two weeks
-
+- Things have to be done by 10/10/2021  
+1. Making sure motion sensor will online with correct values return
+1. Finish Methodology first draft based on our circuit setup and project goal
+1. Collecting data to generate continuous plot of temperature to show different situations(i.e. Engine on/off, CO concentration in safe/warning level)
+1. First draft of presentation slides based on report
+- Things have tobe done by 10/12
+1. Demo (5 minutes)
+  
 ---
 
 ### Methodology
