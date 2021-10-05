@@ -61,7 +61,9 @@ However, out of safety concerns, we will measure humidity instead of CO. Note th
 #### Problems Encountered
 
 - PIR Motion sensor malfunctioning  
-1. Always returns "True" values, even there is no motion in detection area.  
+1. Always returns "True" values, even there is no motion in detection area.
+  
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Problem.jpg" alt="Problem in PIR">
 
   Borrwed one more sensor to check if it is hardware problem or coding problem.  
   
