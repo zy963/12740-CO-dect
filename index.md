@@ -4,6 +4,15 @@
   p.innerText = "Yijie Zhu, Yuming Zhang, Zheyi Li";
 </script>
 
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 <h2 style="text-align:center;"> Vechicular CO Dection </h2>
 vedio link:
@@ -11,7 +20,7 @@ vedio link:
 ---
 
 ### Introduction
-
+$$ y = x^2 $$
 CO is undetectable to the human senses, leading to many deaths every year. Non-traffic, unintentional CO poisoning from vehicle exhaust averaged an estimated 2,000 injuries from 2003–2006. Outbreaks of CO poisoning often occur during winter and extreme weather events (e.g., hurricanes, snowstorms, blizzards) because of motor vehicles left running in a closed environment[1]. Such a breathtaking number draws our attention. Incomplete combustion of fuel produces a huge amount of carbon monoxide. It’s extremely dangerous for passengers and the driver, especially with a defective exhaust system and unsealed car body.  
   
 This project focuses on the CO detection and initial response system for vehicles. CO detection system is designed to collect information of CO concentration, the status of engine, and the occupancy of people in car. If CO detection system finds CO concentration in the car is determined to be unsafe, the initial response system will be triggered to alarm the driver and passengers and circulate the air in the car to ensure the safety of people. We use CO sensor, temperature sensor and motion sensor to verify a true danger. The initial response system includes multiple alarms and starting up the self-circulation of the air conditioner to initially decrease risk.
@@ -27,12 +36,14 @@ We installed a CO sensor and a motion sensor in the car cabinet and a temperatur
 If the CO density is high enough to be determined dangerous, the initial response system will be triggered. If the motion sensor detects the driver in the car, the initial response system will turn on the in-vehicle alarm and the air conditioning system. If there’s only passengers or no people in the car, the initial response system will send an emergency message to the driver besides the in-vehicle alarm and the air conditioning system. But considering that CO poisoning is a low possibility event, we add an extra temperature sensor for engine status check to verify that the high CO density is caused by the engine instead of a system failure. That is to say, the situation will be defined as dangerous when the CO concentration is high with the engine running. The corresponding action of the initial response system will be determined based on human occupancy. The flow chart is attached below.  
   
 <img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/flow%20chart.png" alt="Flow Chart">
+<div align="center">Fig.1 DEcision-Making Map</div>  
   
 However, out of safety concerns, we will measure humidity instead of CO. Note that for the rest of the report, the target gas will still be addressed as CO even though it is humidity that is actually being measured.  
   
+
 ---
 
-### For Progress Report
+### Progress Report
 
 #### Current Progress
 
