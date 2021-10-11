@@ -165,7 +165,7 @@ The main decision-making process is:
 - Use DHT11 temperature and humidity sensor to detect whether the humidity is higher than the threshold value, then conclude the danger level of CO concentration.
   
 <div align="center">Figure10 – Decision-Making Code</div>
-<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Decision-Making Code.jpg" alt="Figure 10 – Decision-Making Code">
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Decision-Making Code.png" alt="Figure 10 – Decision-Making Code">
   
 We assumed the CO concentration has a direct positive relationship between CO and humidity in a closed environment in this decision-making process. When the humidity is higher than the threshold value, the CO centration will be harmful to humans.
   	
