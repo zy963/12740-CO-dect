@@ -60,12 +60,14 @@ As a concession, we decide to use humidity as a substitution for CO. In the rest
   
 ##### 10/01/2021
 First attempt to set up the circuit by using Raspberry Pi 4 and sensors. We first use a motion sensor, 1 LED light, DHT-11 sensor to create a simple circuit to check whether all sensors are working properly.  
-From Figure 2 and 3, we will use the print function in Python code to print the collected temperature and humidity and print “Motion Detected!” if the motion sensor returns the “True” value. “True” value will only be returned once the motion sensor detects motion in the detection range. Based on the output, we think all the sensors work properly. 
-<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/DHT11 testing code.png" alt="Figure 2 – DHT 11 Sensor Testing Code">
-<div align="center">Figure 2 – DHT 11 Sensor Testing Code</div>  
+From Figure 2 and 3, we will use the print function in Python code to print the collected temperature and humidity and print “Motion Detected!” if the motion sensor returns the “True” value. “True” value will only be returned once the motion sensor detects motion in the detection range. Based on the output, we think all the sensors work properly.  
+
+<div align="center">Figure 2 – DHT 11 Sensor Testing Code</div>
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/DHT11 testing code.png" alt="Figure 2 – DHT 11 Sensor Testing Code">  
+
+<div align="center">Figure 3 – Sensor Data Output & Motion Sensor Testing Code</div>
 <img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Output_PIR testing code.jpg" alt="Figure 3 – Sensor Data Output & Motion Sensor Testing Code">
-<div align="center">Figure 3 – Sensor Data Output & Motion Sensor Testing Code</div>  
-  
+   
 Then we added 2 LED lights to show the working status; green LED will on if the DHT 11 is collecting data in Figure 4, then turn off once the DHT 11 stop working in Figure 5. Red LED will on once the motion has been detected by a sensor in Figure 6, turned off when there is no motion detected in Figure 7.  
 
 <div align="center">Figure 4 – Green LED On – DHT 11 is Collecting</div>
