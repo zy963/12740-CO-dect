@@ -41,12 +41,10 @@ However, out of safety concerns, we will measure humidity instead of CO. Note th
 ---
 ### Progress Report
 
-#### Progress Report
-
-##### 09/15/2021
+#### 09/15/2021
 Our group set up the goal of the project, which is to detect the CO concentration in the closed environment and send an alarm to the user who is in this closed environment. The principle of our project is to protect human life by letting them know whether the CO concentration is in danger level. We assumed the vehicle is a closed environment for our testing purpose.  
   
-##### 09/22/2021
+#### 09/22/2021
 Based on the principle of the project, our second meeting focusing on discussing the logic of CO detection and alarming system. As shown in Figure 1, our decision-making map has been created.From Figure 1, we made serval conditions that may occur during the real-life situation. But the major part is still the CO concentration sensor. Other decision circles like *Message* will be expressed by using light. The engine on/off status will be detected by the temperature sensor. 
 Meanwhile, we determine the sensor we are potential going to use are:
 - HC-SR501 PIR Motion Sensor
@@ -54,11 +52,11 @@ Meanwhile, we determine the sensor we are potential going to use are:
 - LED Light(s)
 - MQ-7 CO Carbon Monoxide Detector Sensor  
   
-##### 09/30/2021
+#### 09/30/2021
 After talked with Professor Berges about our project, especially the feasibility of CO concentration sensor data collection. We found that the environment in which we decided to collect the CO concentration data has potential extreme danger, and also, we don’t have a vehicle to create a closed environment for our test.  
 As a concession, we decide to use humidity as a substitution for CO. In the rest of the circuit setup, we will not use the MQ-7 CO concentration sensor but use DHT 11 to collect humidity instead.  
   
-##### 10/01/2021
+#### 10/01/2021
 First attempt to set up the circuit by using Raspberry Pi 4 and sensors. We first use a motion sensor, 1 LED light, DHT-11 sensor to create a simple circuit to check whether all sensors are working properly.  
 From Figure 2 and 3, we will use the print function in Python code to print the collected temperature and humidity and print “Motion Detected!” if the motion sensor returns the “True” value. “True” value will only be returned once the motion sensor detects motion in the detection range. Based on the output, we think all the sensors work properly.  
 
@@ -82,7 +80,7 @@ Then we added 2 LED lights to show the working status; green LED will on if the 
 <div align="center">Figure 7 – Red LED Off – Humidity is below safe level</div>
 <img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Red LED Off.jpg" alt="Figure 7 – Red LED Off – Humidity is below safe level">
   
-##### 10/02/2021-10/08/2021
+#### 10/02/2021-10/08/2021
 Optimizing the logical and decision-making process, we used red LED while the DHT11 was collecting data and green LED on while the motion sensor was working. While testing the motion sensor with no motion detection, a problem was found. The motion sensor keeps returning a True value even if there is no motion in the detection range.  
 A potential problem that may cause the failure in motion sensor returned value:  
 - Motion sensor return certain float numbers that will cause if function always true.
@@ -111,18 +109,23 @@ A potential problem that may cause the failure in motion sensor returned value:
   - By conducting the same process shown above, the motion sensor from the other group will also have the same problem that only returns 1 value all the time.  
 
 Based on all attempts shown above, we decide to not use motion sensor anymore. We will use photosensitive light sensor to detect human occupancy.
-
-
-
-
-
-
-
+  
+#### 10/09/2021
+After we connected the photosensitive light sensor and MCP 3008 to the raspberry pi, we found some problems in testing the installation of Adafruit-Blinka. “board” module is not being imported properly, and we updated the pip3 package manager by using “pip3 install –upgrade pip”, then we reinstall the board module and Adafruit-Blinka library to solve this problem.The sample output is showed in Figure 9.
+  
+<div align="center">Figure 9 – Sample Photosensitive Sensor Output</div>
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Sample Photosensitive Sensor Output.jpg" alt="Figure 9 – Sample Photosensitive Sensor Output">
+  
+In the output, the ADC voltage will increase as the surrounding light become darker; Decrease as the surrounding light become lighter.
+  
+We will use the photosensitive light sensor to detect human occupancy by collecting the data of ADC voltage value. We use a turned-on flashlight point to the sensor so that the value of ADC voltage value will approach 0. When we put the flashlight and sensor inside the vehicle, the ADC voltage will increase when humans are in the vehicle to block the light from a flashlight. So that the system will tell us the human is in the vehicle, and the DHT11 will start collecting the data to test whether the humidity is at the safe level. The red LED will be turned on if the humidity is higher than the safe level.
+  
+**At this point, our group finished all the circuit setup. And we recorded demo to introduce our project and show how our project actually works.**
+  
 ---
 The rest is a draft. 
 
 ---
-
 ### Methodology
 
 #### Phenomena of Interest
@@ -149,11 +152,52 @@ Describe the physical phenomena of interest, e.g. physical principles, static an
 - Describe the signal conditioning and processing procedures
 
 ---
+Hereon is not a draft.
 
+---
 ### Experiments and Results
 
-- Describe the experiments you did and present the results; Use tables and plots if possible
-
+In our project, we will use serval bounded if function to determine whether the assumed closed environment has danger CO concentration level.
+  
+The main decision-making process is:
+- Use a photosensitive light sensor to determine the human occupancy
+- Use DHT11 temperature and humidity sensor to detect the engine working status by measuring the engine temperature
+- Use DHT11 temperature and humidity sensor to detect whether the humidity is higher than the threshold value, then conclude the danger level of CO concentration.
+  
+<div align="center">Figure 10 – Decision-Making Code</div>
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Decision-Making Code.jpg" alt="Figure 10 – Decision-Making Code">
+  
+We assumed the CO concentration has a direct positive relationship between CO and humidity in a closed environment in this decision-making process. When the humidity is higher than the threshold value, the CO centration will be harmful to humans.
+  	
+We set up our circuit properly in a closed classroom to meet our project's closed environment prerequisite condition. Photosensitivity has been fastened on the table; we used a turned-on flashlight to point to the light sensor. The light sensor will receive light to return low ADC values. In this case, we simulate no human in the closed environment if the human body has not blocked the light.
+  
+<div align="center">Figure 11 – No Human Occupancy – Light has not been Blocked</div>
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/No Human Occupancy.jpg" alt="Figure 11 – No Human Occupancy – Light has not been Blocked">
+  
+<div align="center">Figure 12 – No Human Occupancy Message</div>
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/No Human Occupancy Message.jpg" alt="Figure 12 – No Human Occupancy Message">
+  
+When the human is in this closed environment, the light will be blocked. Then the light sensory will return a high ADC value to prove the human occupancy so that our program will print the human occupancy message and start checking the engine working status by measuring the temperature of the engine. In our experiment, we used a hot water bottle to stimulate the engine to release both heat and CO.
+  
+<div align="center">Figure 13 – Human Occupancy & Engine Working Status Message</div>
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Human Occupancy & Engine Working Status Message.jpg" alt="Figure 13 – Human Occupancy & Engine Working Status Message">
+  
+We moved our DHT11 sensor close to the cap for the hot water bottle to receive the heat from the "stimulate engine." We assume the working temperature of the engine will be 25 degrees Celsius. If the collected temperature data is lower than 25, the program will print the "Engine is off" message to the user, and the humidity will not be collected. When the collected temperature is higher than 25, the blue LED will turn on, and a new message will be sent to say, "Engine is on." So that the humidity will be collected when the blue LED is on.
+  
+<div align="center">Figure 14 – Engine Working Status Check</div>
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Engine Working Status Check.jpg" alt="Figure 14 – Engine Working Status Check">
+  
+We opened the hot water bottle cap to let the humidity sensor collect the stream of hot water. We used the steam of hot water to represent the CO that is released by the engine, and we assume the danger level of CO concentration will be attained when the humidity is higher than 70%. A danger message will be sent to the user to alarm them the CO centration in the closed environment is at a danger level. The red LED will turn on once the humidity is higher than 70%. Both danger messages and red LED will warn people in this closed environment to leave there to keep them safe.
+  
+<div align="center">Figure 15 – Printing Safe Humidity Data</div>
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Printing Safe Humidity Data.jpg" alt="Figure 15 – Printing Safe Humidity Data">
+  
+<div align="center">Figure 16 – Collecting Humidity Data & Red LED On when Humidity is in Danger Level</div>
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Collecting Humidity Data.jpg" alt="Figure 16 – Collecting Humidity Data & Red LED On when Humidity is in Danger Level">
+  
+<div align="center">Figure 17 – Printing Danger Humidity Level and Alarm User to Leave The Closed Environment</div>
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Printing Danger Humidity Level and Alarm.jpg" alt="Figure 17 – Printing Danger Humidity Level and Alarm User to Leave The Closed Environment">
+  
 ---
 
 ### Discussion
