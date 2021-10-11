@@ -31,11 +31,11 @@ When CO density exceeds a certain threshold, our body replaces the oxygen in you
 
 We installed a CO sensor and a motion sensor in the car cabinet and a temperature sensor in the exhaust pipe.  
   
-If the CO density is high enough to be determined dangerous, the initial response system will be triggered. If the motion sensor detects the driver in the car, the initial response system will turn on the in-vehicle alarm and the air conditioning system. If there’s only passengers or no people in the car, the initial response system will send an emergency message to the driver besides the in-vehicle alarm and the air conditioning system. But considering that CO poisoning is a low possibility event, we add an extra temperature sensor for engine status check to verify that the high CO density is caused by the engine instead of a system failure. That is to say, the situation will be defined as dangerous when the CO concentration is high with the engine running. The corresponding action of the initial response system will be determined based on human occupancy. The flow chart is attached below.  
+If the CO density is high enough to be determined dangerous, the initial response system will be triggered. If the motion sensor detects the driver in the car, the initial response system will turn on the in-vehicle alarm and the air conditioning system. If there’s only passengers or no people in the car, the initial response system will send an emergency message to the driver besides the in-vehicle alarm and the air conditioning system. But considering that CO poisoning is a low possibility event, we add an extra temperature sensor for engine status check to verify that the high CO density is caused by the engine instead of a system failure. That is to say, the situation will be defined as dangerous when the CO concentration is high with the engine running. The corresponding action of the initial response system will be determined based on human occupancy. The flow chart is attached below. 
   
+<div align="center">Figure 1 DEcision-Making Map</div>
 <img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/flow%20chart.png" alt="Figure 1 DEcision-Making Map">
-<div align="center">Figure 1 DEcision-Making Map</div>  
-  
+    
 However, out of safety concerns, we will measure humidity instead of CO. Note that for the rest of the report, the target gas will still be addressed as CO even though it is humidity that is actually being measured.  
   
 ---
@@ -66,15 +66,19 @@ From Figure 2 and 3, we will use the print function in Python code to print the 
 <img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Output_PIR testing code.jpg" alt="Figure 3 – Sensor Data Output & Motion Sensor Testing Code">
 <div align="center">Figure 3 – Sensor Data Output & Motion Sensor Testing Code</div>  
   
-Then we added 2 LED lights to show the working status; green LED will on if the DHT 11 is collecting data in Figure 4, then turn off once the DHT 11 stop working in Figure 5. Red LED will on once the motion has been detected by a sensor in Figure 6, turned off when there is no motion detected in Figure 7. 
-<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Green LED On.jpg" alt="Figure 4 – Green LED On – DHT 11 is Collecting">
-<div align="center">Figure 4 – Green LED On – DHT 11 is Collecting</div>  
-<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Green LED Off.jpg" alt="Figure 5 – Green LED Off – DHT 11 not working">
-<div align="center">Figure 5 – Green LED Off – DHT 11 not working</div>  
-<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Red LED On.jpg" alt="Figure 6– Red LED On– Humidity is above safe level">
-<div align="center">Figure 6– Red LED On– Humidity is above safe level</div>  
+Then we added 2 LED lights to show the working status; green LED will on if the DHT 11 is collecting data in Figure 4, then turn off once the DHT 11 stop working in Figure 5. Red LED will on once the motion has been detected by a sensor in Figure 6, turned off when there is no motion detected in Figure 7.  
+
+<div align="center">Figure 4 – Green LED On – DHT 11 is Collecting</div>
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Green LED On.jpg" alt="Figure 4 – Green LED On – DHT 11 is Collecting">  
+
+<div align="center">Figure 5 – Green LED Off – DHT 11 not working</div>
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Green LED Off.jpg" alt="Figure 5 – Green LED Off – DHT 11 not working">  
+
+<div align="center">Figure 6– Red LED On– Humidity is above safe level</div>
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Red LED On.jpg" alt="Figure 6– Red LED On– Humidity is above safe level">  
+
+<div align="center">Figure 7 – Red LED Off – Humidity is below safe level</div>
 <img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Red LED Off.jpg" alt="Figure 7 – Red LED Off – Humidity is below safe level">
-<div align="center">Figure 7 – Red LED Off – Humidity is below safe level</div>  
   
 ##### 10/02/2021-10/08/2021
 Optimizing the logical and decision-making process, we used red LED while the DHT11 was collecting data and green LED on while the motion sensor was working. While testing the motion sensor with no motion detection, a problem was found. The motion sensor keeps returning a True value even if there is no motion in the detection range.  
@@ -84,9 +88,9 @@ A potential problem that may cause the failure in motion sensor returned value:
   - After printing, we found that the motion sensor always returns 1 for either motion detected or motion not detected situation.
   - We think the problem is caused by the sensor itself, since it only returns 1 value.  
 
+<div align="center">Figure 8 – Print Returning Value from Motion Sensor</div>
 <img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Print Returning Value from Motion Sensor.jpg" alt="Figure 8 – Print Returning Value from Motion Sensor">
-<div align="center">Figure 8 – Print Returning Value from Motion Sensor</div>  
-
+  
 - Sensitivity is too high so that the motion will be detected any time. (×)
   - Use a 3*mm* straight screwdriver to return sensitivity counterclockwise to reduce the sensitivity as much low as we can.
   - Adjusting sensitivity in both counterclockwise and clockwise during the sensor is working, try to find a "motion no detected" situation where the sensor will return a *False* result.  
