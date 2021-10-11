@@ -16,11 +16,9 @@
 
 <h2 style="text-align:center;"> Vechicular CO Dection </h2>
 vedio link:
-
 ---
-
 ### Introduction
-$$ y = x^2 $$
+
 CO is undetectable to the human senses, leading to many deaths every year. Non-traffic, unintentional CO poisoning from vehicle exhaust averaged an estimated 2,000 injuries from 2003–2006. Outbreaks of CO poisoning often occur during winter and extreme weather events (e.g., hurricanes, snowstorms, blizzards) because of motor vehicles left running in a closed environment[1]. Such a breathtaking number draws our attention. Incomplete combustion of fuel produces a huge amount of carbon monoxide. It’s extremely dangerous for passengers and the driver, especially with a defective exhaust system and unsealed car body.  
   
 This project focuses on the CO detection and initial response system for vehicles. CO detection system is designed to collect information of CO concentration, the status of engine, and the occupancy of people in car. If CO detection system finds CO concentration in the car is determined to be unsafe, the initial response system will be triggered to alarm the driver and passengers and circulate the air in the car to ensure the safety of people. We use CO sensor, temperature sensor and motion sensor to verify a true danger. The initial response system includes multiple alarms and starting up the self-circulation of the air conditioner to initially decrease risk.
@@ -35,59 +33,85 @@ We installed a CO sensor and a motion sensor in the car cabinet and a temperatur
   
 If the CO density is high enough to be determined dangerous, the initial response system will be triggered. If the motion sensor detects the driver in the car, the initial response system will turn on the in-vehicle alarm and the air conditioning system. If there’s only passengers or no people in the car, the initial response system will send an emergency message to the driver besides the in-vehicle alarm and the air conditioning system. But considering that CO poisoning is a low possibility event, we add an extra temperature sensor for engine status check to verify that the high CO density is caused by the engine instead of a system failure. That is to say, the situation will be defined as dangerous when the CO concentration is high with the engine running. The corresponding action of the initial response system will be determined based on human occupancy. The flow chart is attached below.  
   
-<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/flow%20chart.png" alt="Flow Chart">
-<div align="center">Fig.1 DEcision-Making Map</div>  
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/flow%20chart.png" alt="Figure 1 DEcision-Making Map">
+<div align="center">Figure 1 DEcision-Making Map</div>  
   
 However, out of safety concerns, we will measure humidity instead of CO. Note that for the rest of the report, the target gas will still be addressed as CO even though it is humidity that is actually being measured.  
   
-
 ---
-
 ### Progress Report
 
-#### Current Progress
+#### Progress Report
 
-##### Things that have been done by 10/2/2021
-- Circuit Setup (80% complete)  
+##### 09/15/2021
+Our group set up the goal of the project, which is to detect the CO concentration in the closed environment and send an alarm to the user who is in this closed environment. The principle of our project is to protect human life by letting them know whether the CO concentration is in danger level. We assumed the vehicle is a closed environment for our testing purpose.  
   
-<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/circuit_1004.jpg" alt="Circuit">
-<div align="center">Circuit by Oct.04</div> 
+##### 09/22/2021
+Based on the principle of the project, our second meeting focusing on discussing the logic of CO detection and alarming system. As shown in Figure 1, our decision-making map has been created.From Figure 1, we made serval conditions that may occur during the real-life situation. But the major part is still the CO concentration sensor. Other decision circles like *Message* will be expressed by using light. The engine on/off status will be detected by the temperature sensor. 
+Meanwhile, we determine the sensor we are potential going to use are:
+- HC-SR501 PIR Motion Sensor
+- DHT 11 Temperature and Humidity Sensor
+- LED Light(s)
+- MQ-7 CO Carbon Monoxide Detector Sensor  
   
+##### 09/30/2021
+After talked with Professor Berges about our project, especially the feasibility of CO concentration sensor data collection. We found that the environment in which we decided to collect the CO concentration data has potential extreme danger, and also, we don’t have a vehicle to create a closed environment for our test.  
+As a concession, we decide to use humidity as a substitution for CO. In the rest of the circuit setup, we will not use the MQ-7 CO concentration sensor but use DHT 11 to collect humidity instead.  
   
-- Temperature and humidity sensor  
-1. Temperature focusing on determining the engine on/off status.  
-1. Humidity focusing on determining the CO concentration level: Out of safety concerns, we will measure humidity instead of CO.
+##### 10/01/2021
+First attempt to set up the circuit by using Raspberry Pi 4 and sensors. We first use a motion sensor, 1 LED light, DHT-11 sensor to create a simple circuit to check whether all sensors are working properly.  
+From Figure 2 and 3, we will use the print function in Python code to print the collected temperature and humidity and print “Motion Detected!” if the motion sensor returns the “True” value. “True” value will only be returned once the motion sensor detects motion in the detection range. Based on the output, we think all the sensors work properly. 
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/DHT11 testing code.png" alt="Figure 2 – DHT 11 Sensor Testing Code">
+<div align="center">Figure 2 – DHT 11 Sensor Testing Code</div>  
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Output_PIR testing code.jpg" alt="Figure 3 – Sensor Data Output & Motion Sensor Testing Code">
+<div align="center">Figure 3 – Sensor Data Output & Motion Sensor Testing Code</div>  
   
-- 2 Lights  
-1. 1 will keep lighting if the circuit is working properly: Lighting while temperature and humidity sensor is working.  
-1. 2 will keep lighting once the CO concentrationhumidity (humidity) is above certain threshold.  
+Then we added 2 LED lights to show the working status; green LED will on if the DHT 11 is collecting data in Figure 4, then turn off once the DHT 11 stop working in Figure 5. Red LED will on once the motion has been detected by a sensor in Figure 6, turned off when there is no motion detected in Figure 7. 
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Green LED On.jpg" alt="Figure 4 – Green LED On – DHT 11 is Collecting">
+<div align="center">Figure 4 – Green LED On – DHT 11 is Collecting</div>  
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Green LED Off.jpg" alt="Figure 5 – Green LED Off – DHT 11 not working">
+<div align="center">Figure 5 – Green LED Off – DHT 11 not working</div>  
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Red LED On.jpg" alt="Figure 6– Red LED On– Humidity is above safe level">
+<div align="center">Figure 6– Red LED On– Humidity is above safe level</div>  
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Red LED Off.jpg" alt="Figure 7 – Red LED Off – Humidity is below safe level">
+<div align="center">Figure 7 – Red LED Off – Humidity is below safe level</div>  
   
-- Data will be stored in a .npy file, which can be imported on other device by using Python 3.
-1. In our circuit, we will use light to reflect the CO concentration timely.  
-  
-- Report Section  
-1. Introduction, Motivation and Goal first draft has been finished.  
-1. Waiting for experiments and results to make adjustment on these sections.   
-  
-#### Problems Encountered
+##### 10/02/2021-10/08/2021
+Optimizing the logical and decision-making process, we used red LED while the DHT11 was collecting data and green LED on while the motion sensor was working. While testing the motion sensor with no motion detection, a problem was found. The motion sensor keeps returning a True value even if there is no motion in the detection range.  
+A potential problem that may cause the failure in motion sensor returned value:  
+- Motion sensor return certain float numbers that will cause if function always true.
+  - Use while loop to print the input value from motion sensor at the time period of 1s, the code and running result is in Figure 8.
+  - After printing, we found that the motion sensor always returns 1 for either motion detected or motion not detected situation.
+  - We think the problem is caused by the sensor itself, since it only returns 1 value.  
 
-- PIR Motion sensor malfunctioning  
-1. Always returns "True" values, even there is no motion in detection area.
-  
-<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Problem.jpg" alt="Problem in PIR">
+<img src="https://raw.githubusercontent.com/zy963/12740-CO-dect/main/Print Returning Value from Motion Sensor.jpg" alt="Figure 8 – Print Returning Value from Motion Sensor">
+<div align="center">Figure 8 – Print Returning Value from Motion Sensor</div>  
 
-  Borrwed one more sensor to check if it is hardware problem or coding problem.  
-  
-#### Future Plan
+- Sensitivity is too high so that the motion will be detected any time. (×)
+  - Use a 3*mm* straight screwdriver to return sensitivity counterclockwise to reduce the sensitivity as much low as we can.
+  - Adjusting sensitivity in both counterclockwise and clockwise during the sensor is working, try to find a "motion no detected" situation where the sensor will return a *False* result.  
 
-- Things have to be done by 10/10/2021  
-1. Making sure motion sensor will online with correct values return
-1. Finish Methodology first draft based on our circuit setup and project goal
-1. Collecting data to generate continuous plot of temperature to show different situations(i.e. Engine on/off, CO concentration in safe/warning level)
-1. First draft of presentation slides based on report
-- Things have tobe done by 10/12
-1. Demo (5 minutes)
-  
+- Time delay is too high that the motion sensor has no time to return other value. (×)
+  - Use a 3*mm* straight screwdriver to return sensitivity counterclockwise to reduce the sensitivity as much low as we can.
+  - Adjusting sensitivity in both counterclockwise and clockwise during the sensor is working, try to find a "motion no detected" situation where the sensor will return a *False* result.  
+
+- Coding issue.
+  - Solved. There is no syntax or pin arrangement issue in the code.
+  - If there is a problem, the sensor will not return values.
+  - According to the result printing step shown above, we know that the sensor will only return the same value, which is not caused by the code.  
+
+- Motion sensor malfunction due to itself.
+  - We borrowed the other motion sensor from another course group.
+  - By conducting the same process shown above, the motion sensor from the other group will also have the same problem that only returns 1 value all the time.  
+
+Based on all attempts shown above, we decide to not use motion sensor anymore. We will use photosensitive light sensor to detect human occupancy.
+
+
+
+
+
+
+
 ---
 The rest is a draft. 
 
