@@ -21,7 +21,7 @@ vedio link:
 
 &ensp;&ensp;CO is undetectable to the human senses, leading to many deaths every year. Non-traffic, unintentional CO poisoning from vehicle exhaust averaged an estimated 2,000 injuries from 2003–2006. Outbreaks of CO poisoning often occur during winter and extreme weather events (e.g., hurricanes, snowstorms, blizzards) because of motor vehicles left running in a closed environment[1]. Such a breathtaking number draws our attention. Incomplete combustion of fuel produces a huge amount of carbon monoxide. It’s extremely dangerous for passengers and the driver, especially with a defective exhaust system and unsealed car body.  
   
-&ensp;&ensp;This project focuses on the CO detection and initial response system for vehicles. CO detection system is designed to collect information of CO concentration, the status of engine, and the occupancy of people in car. If CO detection system finds CO concentration in the car is determined to be unsafe, the initial response system will be triggered to alarm the driver and passengers and circulate the air in the car to ensure the safety of people. We use CO sensor, temperature sensor and motion sensor to verify a true danger. The initial response system includes multiple alarms and starting up the self-circulation of the air conditioner to initially decrease risk.
+&ensp;&ensp;This project focuses on the CO detection and initial response system for vehicles. CO detection system is designed to collect information of CO concentration, the status of engine, and the occupancy of people in car. If CO detection system finds CO concentration in the car is determined to be unsafe, the initial response system will be triggered to alarm the driver and passengers and circulate the air in the car to ensure the safety of people. We use CO sensor, temperature sensor and photoresistor sensor to verify a true danger. The initial response system includes multiple alarms.
 
 #### Motivation
 
@@ -123,9 +123,6 @@ vedio link:
 **At this point, our group finished all the circuit setup. And we recorded demo to introduce our project and show how our project actually works.**
   
 ---
-The rest is a draft. 
-
----
 ### Methodology
 
 #### Phenomena of Interest
@@ -136,8 +133,12 @@ The rest is a draft.
   
 #### Sensors Used
 
-- Describe the sensors you used, e.g. physical principles, static and dynamic behavior, and signal characteristics
-
+&ensp;&ensp;In this project, we use light to determine the human occupancy status. A general Photoresistor Sensor works under the following principle. When the photoresistor is blocked by the object, meaning a lower light intensity, the resistance of it is will be extremely high. Otherwise, when the sensor is shined by light, meaning a high light intensity, its resistance will drop down notably [4]. Therefore, we can get the light intensity by measuring the resistance of it at any time.
+  
+&ensp;&ensp;A temperature sensor is employed to check the engine status. However, considering the range of our sensor which is between 0-50℃, we measure the temperature of the exhaust which is between 30-120℃, instead of directly measuring the engine itself. DHT11 Temperature Sensor has a Negative Temperature coefficient thermistor. When the temperature increases, the resistance of it will decrease. Semiconductor is in the sensor in order to get more accurate changes [5]. So, we can get the temperature of the exhausted gas.
+  
+&ensp;&ensp;A humidity sensor is utilized to measure the humidity of the ambient humidity. As aforementioned, out of safety concern, we use humidity to substitute the actual CO. Capacity sensor has a moisture holding between two electrodes, and the electrical capacity changes with the atmosphere’s relative humidity [6]. Therefore, we can change the analog signal into digital signal and easily to get the humidity.
+  
 #### Signal Conditioning and Processing
 
 &ensp;&ensp;The main decision-making process works as follows:
@@ -206,4 +207,11 @@ The rest is a draft.
   
 [2]MAYO Clinic. (2019, October 16). Carbon monoxide poisoning. Mayo Clinic. Retrieved October 4, 2021, Available from https://www.mayoclinic.org/diseases-conditions/carbon-monoxide/symptoms-causes/syc-20370642.   
   
-[3]Iowa State University. (2020). Carbon monoxide poisoning: Vehicles (AEN-208). Department of Agricultural and Biosystems Engineering. Retrieved October 4, 2021, Available from https://www.abe.iastate.edu/extension-and-outreach/carbon-monoxide-poisoning-vehicles-aen-208/.   
+[3]Iowa State University. (2020). Carbon monoxide poisoning: Vehicles (AEN-208). Department of Agricultural and Biosystems Engineering. Retrieved October 4, 2021, Available from https://www.abe.iastate.edu/extension-and-outreach/carbon-monoxide-poisoning-vehicles-aen-208/.  
+  
+[4] https://diy.waziup.io/sensors/light/photoresistor.html
+  
+[5] https://www.elprocus.com/a-brief-on-dht11-sensor/
+  
+[6] https://in.element14.com/sensor-humidity-sensor-technology
+
