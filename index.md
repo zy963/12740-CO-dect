@@ -17,7 +17,6 @@
 <h2 style="text-align:center;"> Vechicular CO Dection </h2>
 [vedio link](https://youtu.be/T_4aLpvwQfs/)
   
----
 ### Introduction
 
 &ensp;&ensp;CO is undetectable to the human senses, leading to many deaths every year. Non-traffic, unintentional CO poisoning from vehicle exhaust averaged an estimated 2,000 injuries from 2003–2006. Outbreaks of CO poisoning often occur during winter and extreme weather events (e.g., hurricanes, snowstorms, blizzards) because of motor vehicles left running in a closed environment[1]. Such a breathtaking number draws our attention. Incomplete combustion of fuel produces a huge amount of carbon monoxide. It’s extremely dangerous for passengers and the driver, especially with a defective exhaust system and unsealed car body.  
